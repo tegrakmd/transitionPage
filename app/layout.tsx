@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
+
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/nav";
 
-const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +17,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const newsflashBB = localFont({
+  src: "./fonts/NewsflashBB.ttf",
+  variable: "--font-newsflash-bb",
 });
 
 export const metadata: Metadata = {
@@ -29,12 +36,12 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-    <html
-      lang="en" suppressHydrationWarning
-      className={cn(geistSans.variable, geistMono.variable, "h-full antialiased", jetbrainsMono.variable)}
-    >
+      <html
+        lang="en" suppressHydrationWarning
+        className={cn(geistSans.variable, geistMono.variable, newsflashBB.variable, "h-full antialiased")}
+      >
         <body className="min-h-full flex flex-col"><Navbar />{children}</body>
-    </html>
-      </ViewTransitions>
+      </html>
+    </ViewTransitions>
   );
 }
