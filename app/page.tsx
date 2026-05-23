@@ -1,11 +1,14 @@
 "use client"
 import { ReactLenis } from "@studio-freight/react-lenis"
+import Image from "next/image";
+
 
 
 export default function Home() {
   return (
      <ReactLenis root>
-<section className="h-screen w-full bg-black">
+<section className="h-screen w-full bg-black/45 relative">
+<Image alt="cover" src="/1.jpg" width={1200} height={1200} className="absolute z-0 inset-0 object-cover size-full"/>
  <div className="flex flex-col items-center justify-center h-full">
  <h1 className="text-4xl font-bold text-white">Home</h1>
   <div className="max-w-2xl mx-auto px-4 mt-6">

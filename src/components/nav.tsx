@@ -37,7 +37,7 @@ const Navbar = () => {
         }
     )};
     return (
-        <div className="flex justify-between items-center p-4 z-30 fixed top-0 left-0 right-0 bg-transparent dark:bg-transparent text-white ">
+        <div className="flex justify-between items-center p-4 z-30 fixed top-0 left-0 right-0 bg-transparent dark:bg-transparent text-white *:md:text-xl *:uppercase *:font-mono">
           <div className="link">
             <a onClick={(e) => {e.preventDefault();
              router.push("/",
@@ -47,7 +47,8 @@ const Navbar = () => {
             } }
             href="/">Home</a>
         </div>
-        <div className="link">
+       <div className="flex items-center gap-4">
+         <div className="link">
             <a onClick={(e) => {e.preventDefault();
              router.push("/about",
                 { onTransitionReady:slideInOut,
@@ -56,6 +57,16 @@ const Navbar = () => {
             } }
             href="/about">About</a>
         </div>
+         <div className="link">
+            <a onClick={(e) => {e.preventDefault();
+             router.push("/service",
+                { onTransitionReady:slideInOut,
+
+                });
+            } }
+            href="/service">service</a>
+        </div>
+       </div>
         </div>
     );
 };
