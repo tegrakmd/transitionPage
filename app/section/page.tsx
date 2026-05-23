@@ -60,10 +60,8 @@ export default function Page() {
                 <main ref={containerRef}>
                     <section className="Section one">
                         <div className="section-inner">
-                            <div className="col">
-                                <div className="my-auto ">
-                                    <h1>Transition Section 1</h1>
-                                </div>
+                            <div className="m-auto ">
+                                <h1>Transition Section 1</h1>
                             </div>
                         </div>
                     </section>
