@@ -108,9 +108,9 @@ export default function Page() {
 
                 </main>
                 <footer className="bg-black w-full h-[50svh] w-full">
-                    <div className="">
+                    <div className="flex items-center justify-center size-full">
 
-                        <h1 className="flex items-center justify-center my-auto">Footer</h1>
+                        <h1 className="">FooteR</h1>
 
                     </div>
                 </footer>
