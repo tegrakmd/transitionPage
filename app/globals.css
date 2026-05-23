@@ -197,8 +197,8 @@ h1 {
    min-height: 100svh;
    overflow: hidden;
 }
- .container{
-position: relative;
+.section-inner {
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 2rem;
@@ -207,26 +207,23 @@ position: relative;
   transform-origin: bottom left;
   will-change: transform;
 }
-.col{
-  flex: 1;
-}
-.one .container{
+
+.one .section-inner {
   background-color: var(--base-100);
 }
-.two .container{
+.two .section-inner {
   background-color: var(--base-200);
 }
-.three .container{
+.three .section-inner {
   background-color: var(--base-300);
 }
-.four .container{
+.four .section-inner {
   background-color: var(--base-400);
   height: 300svh;
 }
-.five .container{
+.five .section-inner {
   background-color: var(--base-500);
 }
-.six .container{
-  
+.six .section-inner {
   background-color: var(--base-600);
 }

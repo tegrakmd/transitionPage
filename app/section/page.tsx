@@ -30,7 +30,7 @@ export default function Page() {
     useGSAP(() => {
         const sections = document.querySelectorAll(".Section");
         sections.forEach((section, index) => {
-            const container = section.querySelector(".container");
+            const container = section.querySelector(".section-inner");
             gsap.to(container, {
                 rotation: 0,
                 ease: "none",
@@ -57,9 +57,9 @@ export default function Page() {
                 autoRaf: false,
             }} ref={lenisRef}>
 
-                <main ref={containerRef} className="w-full overflow-hidden bg-white">
+                <main ref={containerRef}>
                     <section className="Section one">
-                        <div className="container">
+                        <div className="section-inner">
                             <div className="col">
                                 <div className="my-auto ">
                                     <h1>Transition Section 1</h1>
@@ -68,21 +68,21 @@ export default function Page() {
                         </div>
                     </section>
                     <section className="Section two">
-                        <div className="container">
+                        <div className="section-inner">
                             <div className="m-auto ">
                                 <h1>Transition Section 2</h1>
                             </div>
                         </div>
                     </section>
                     <section className="Section three">
-                        <div className="container">
+                        <div className="section-inner">
                             <div className="m-auto ">
                                 <h1>Transition Section 3</h1>
                             </div>
                         </div>
                     </section>
                     <section className="Section four md:h-[130svh]">
-                        <div className="container">
+                        <div className="section-inner">
                             <div className="flex  flex-col">
                                 <div className="m-auto ">
                                     <h1>Transition Section 4</h1>
@@ -94,14 +94,14 @@ export default function Page() {
                         </div>
                     </section>
                     <section className="Section five">
-                        <div className="container">
+                        <div className="section-inner">
                             <div className="m-auto ">
                                 <h1>Transition Section 5</h1>
                             </div>
                         </div>
                     </section>
                     <section className="Section six">
-                        <div className="container">
+                        <div className="section-inner">
                             <div className="m-auto ">
                                 <h1>Transition Section 6</h1>
                             </div>
