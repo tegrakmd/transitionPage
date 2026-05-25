@@ -37,7 +37,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-   --base-100: #8e9487;
+  --base-100: #8e9487;
   --base-200: #1e1e1c;
   --base-300: #9381ff;
   --base-400: #f0c808;
@@ -100,7 +100,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-newsflash-bb),Arial, Helvetica, sans-serif;
+  font-family: var(--font-newsflash-bb), Arial, Helvetica, sans-serif;
 }
 
 .dark {
@@ -135,7 +135,6 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-
 }
 
 @layer base {
@@ -172,37 +171,66 @@ body {
 }
 /* ///// */
 @font-face {
-  font-family: 'Newsflash BB';
+  font-family: "Newsflash BB";
   font-style: normal;
   font-weight: 100 1000;
   font-display: swap;
-  src: url('./fonts/NewsflashBB.ttf') format('truetype');
+  src: url("./fonts/NewsflashBB.ttf") format("truetype");
 }
-
 
 ::-webkit-scrollbar {
   display: none;
 }
+
 h1 {
   font-family: var(--font-newsflash-bb), sans-serif;
   font-size: clamp(3rem, 10vw, 15rem);
   font-weight: 500;
   letter-spacing: -0.025rem;
   line-height: 1;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
+h1 .char {
+  position: relative;
+  will-change: transform;
+}
+/* Info Text Animation */
+p {
+  font-family: var(--font-geist-sans);
+}
+p .line,
+.split-line {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+p .line span,
+.split-line span {
+  position: relative;
+  will-change: transform;
+}
+/*  */
 .Section {
   position: relative;
   width: 100%;
   height: 100svh;
-   min-height: 100svh;
-   overflow: hidden;
+  min-height: 100svh;
+  overflow: hidden;
 }
-.section-inner {
+.Section .section-inner {
   position: relative;
   width: 100%;
   height: 100%;
   padding: 2rem;
   display: flex;
+  /* transform: rotate(20deg); */
+  /* transform-origin: bottom left; */
+  /* translateX(6.0851%)  */
+  /*  */
+  /* top: 0px; 
+  transform:  rotate(5.5998deg); 
+  transform-origin: bottom left;
+  will-change: transform; */
+  /*  */
   transform: rotate(30deg);
   transform-origin: bottom left;
   will-change: transform;
@@ -219,7 +247,6 @@ h1 {
 }
 .four .section-inner {
   background-color: var(--base-400);
-  height: 300svh;
 }
 .five .section-inner {
   background-color: var(--base-500);
@@ -227,3 +254,16 @@ h1 {
 .six .section-inner {
   background-color: var(--base-600);
 }
+/* @media (max-width: 768px) {
+  .section-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    top: 0px;
+    transform: rotate(10.5998deg);
+    transform-origin: 0% 0%;
+    will-change: transform;
+  }
+} */

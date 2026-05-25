@@ -1,0 +1,141 @@
+/* Terminal Border Animation Styles */
+
+/* Conteneur SVG Mask avec animation */
+.svg-mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  /* Variables CSS pour clipPath et mask */
+  --d27fb6da: url(#clip-default);
+  --b18bdda2: url(#mask-default);
+}
+
+/* SVG shape rendering pour plus de précision */
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  shape-rendering: geometricPrecision;
+  pointer-events: none;
+
+  /* Animation subtile du SVG */
+  opacity: 0.95;
+  filter: drop-shadow(0 0 2px rgba(166, 252, 56, 0.3));
+}
+
+/* Contenu clippé par le SVG */
+.slot.use-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #050e0c;
+
+  /* Appliquer le clipPath dynamique */
+  clip-path: var(--d27fb6da, none);
+}
+
+/* Notch Separator Wrapper */
+.notch-separator__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.notch-separator {
+  position: relative;
+  width: 100%;
+}
+
+.notch-section__wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Notch Bottom Wrapper */
+.notch__wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.notch__wrapper.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Notch Top Background Container */
+.notch-top__bg-container {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(166, 252, 56, 0.1);
+  z-index: 0;
+}
+
+/* Animation pour le gradient de la grille */
+@keyframes gridPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation douce du clipPath */
+@keyframes clipPathShift {
+  0% {
+    filter: drop-shadow(0 0 1px rgba(166, 252, 56, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 3px rgba(166, 252, 56, 0.4));
+  }
+  100% {
+    filter: drop-shadow(0 0 1px rgba(166, 252, 56, 0.2));
+  }
+}
+
+.svg {
+  animation: clipPathShift 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .svg {
+    filter: drop-shadow(0 0 1px rgba(166, 252, 56, 0.2));
+  }
+}
+
+/* Styles pour les notches animées */
+svg defs clipPath path {
+  fill: none;
+  stroke: none;
+}
+
+/* Accent color for glowing effect */
+.svg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(166, 252, 56, 0.5),
+    transparent
+  );
+  pointer-events: none;
+}

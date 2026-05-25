@@ -4,7 +4,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ReactLenis, LenisRef } from "lenis/react";
-import Image from "next/image";
+import { SplitText } from "@/components/splitText";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,8 +32,13 @@ export default function Page() {
     useGSAP(() => {
         const sections = document.querySelectorAll(".Section");
         sections.forEach((section, index) => {
-            const container = section.querySelector(".section-inner");
-            gsap.to(container, {
+            const sectionInner = section.querySelector(".section-inner");
+            gsap.fromTo(sectionInner, {
+                xPercent: 6.0851,
+                rotation: 10.5998,
+                transformOrigin: "0% 0%",
+            }, {
+                xPercent: 0,
                 rotation: 0,
                 ease: "none",
                 scrollTrigger: {
@@ -61,7 +68,13 @@ export default function Page() {
                     <section className="Section one">
                         <div className="section-inner">
                             <div className="m-auto ">
-                                <h1>Transition Section 1</h1>
+                                <SplitText as="h1"
+                                    className="text-[15vw] font-bold text-white font-mono uppercase tracking-[-0.2rem]"
+                                    duration={1}
+                                    stagger={0.075}
+                                    delay={1}>
+                                    Transition Section 1
+                                </SplitText>
                             </div>
                         </div>
                     </section>
@@ -79,16 +92,14 @@ export default function Page() {
                             </div>
                         </div>
                     </section>
-                    <section className="Section four md:h-[130svh]">
+                    <section className="Section four ">
                         <div className="section-inner">
-                            <div className="flex  flex-col">
-                                <div className="m-auto ">
-                                    <h1>Transition Section 4</h1>
-                                </div>
-                                <div className="max-w-[30%] w-full">
-                                    <Image alt="image" src="/1.jpg" width={400} height={400} className="rounded-md object-cover size-full"></Image>
-                                </div>
+
+                            <div className="m-auto ">
+                                <h1>Transition Section 4</h1>
                             </div>
+
+
                         </div>
                     </section>
                     <section className="Section five">

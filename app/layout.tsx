@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
-
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/nav";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,10 +35,18 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html
-        lang="en" suppressHydrationWarning
-        className={cn(geistSans.variable, geistMono.variable, newsflashBB.variable, "h-full antialiased")}
-      >
-        <body className="min-h-full flex flex-col"><Navbar />{children}</body>
+        lang="en"
+        suppressHydrationWarning
+        className={cn(
+          geistSans.variable,
+          geistMono.variable,
+          newsflashBB.variable,
+          "h-full antialiased"
+        )}>
+        <body className="min-h-full flex flex-col">
+          <Navbar />
+          {children}
+        </body>
       </html>
     </ViewTransitions>
   );
