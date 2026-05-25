@@ -118,7 +118,7 @@ export default function Page() {
                     </section>
 
                 </main>
-                <footer className="bg-black w-full h-[50svh] w-full">
+                <footer className="bg-black w-full h-[50dvh] w-full">
                     <div className="flex items-center justify-center size-full">
 
                         <h1 className="">FooteR</h1>
