@@ -11,7 +11,7 @@ export default function Home() {
   const sectionRef = useRef<HTMLDivElement>(null);
   return (
     <ReactLenis root>
-      <section className="h-screen w-full bg-black/45 relative">
+      <section className="h-screen w-full overflow-hidden bg-black/45 relative">
         <Image
           alt="cover"
           src="/1.jpg"
