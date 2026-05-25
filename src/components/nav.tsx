@@ -38,7 +38,7 @@ const Navbar = () => {
         )
     };
     return (
-        <div className="flex justify-between items-center p-4 z-30 fixed top-0 left-0 right-0 bg-transparent dark:bg-transparent text-white text-base *:md:text-[16px] *:uppercase *:font-mono">
+        <div className="flex justify-between items-center p-4 z-40 fixed top-0 left-0 right-0 bg-transparent dark:bg-transparent text-white text-base *:md:text-[16px] *:uppercase *:font-mono">
             <div className="link">
                 <a onClick={(e) => {
                     e.preventDefault();

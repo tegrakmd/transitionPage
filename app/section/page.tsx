@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ReactLenis, LenisRef } from "lenis/react";
 import { SplitText } from "@/components/splitText";
+import Image from "next/image";
 
 
 
@@ -31,10 +32,13 @@ export default function Page() {
     // 3. Le return est bien à l'intérieur de la fonction Page
     useGSAP(() => {
         const sections = document.querySelectorAll(".Section");
+
         sections.forEach((section, index) => {
+
             const sectionInner = section.querySelector(".section-inner");
+            
             gsap.fromTo(sectionInner, {
-                xPercent: 6.0851,
+                xPercent: 6.0851 ,
                 rotation: 10.5998,
                 transformOrigin: "0% 0%",
             }, {
@@ -48,13 +52,16 @@ export default function Page() {
                     scrub: true,
                 },
             });
+
             if (index === sections.length - 1) return;
+
             ScrollTrigger.create({
                 trigger: section,
                 start: "bottom bottom",
                 end: "bottom top",
                 pin: true,
                 pinSpacing: false
+                
             })
         });
     }, { scope: containerRef });
@@ -98,15 +105,23 @@ export default function Page() {
                             <div className="m-auto ">
                                 <h1>Transition Section 4</h1>
                             </div>
+                         
 
 
                         </div>
                     </section>
-                    <section className="Section five">
-                        <div className="section-inner">
-                            <div className="m-auto ">
-                                <h1>Transition Section 5</h1>
-                            </div>
+                    <section className="Section five ">
+                        <div className="section-inner flex flex-col">
+                            
+                              <div className="col mt-9">
+                                  <div className="w-[30%] mx-auto overflow-hidden">
+                                    <Image src="/1.jpg" alt="profil" width={1200} height={1200} className="object-cover inset-0" />
+                                  </div>
+                              </div>
+                                <div className="col mx-auto">
+                                  <h1>Transition Section 5</h1>
+                              </div>
+                           
                         </div>
                     </section>
                     <section className="Section six">
@@ -118,11 +133,9 @@ export default function Page() {
                     </section>
 
                 </main>
-                <footer className="bg-black w-full h-[50dvh] w-full">
+                <footer className="bg-black  h-[50dvh] w-full">
                     <div className="flex items-center justify-center size-full">
-
                         <h1 className="">FooteR</h1>
-
                     </div>
                 </footer>
             </ReactLenis>
