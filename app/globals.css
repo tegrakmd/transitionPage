@@ -137,6 +137,68 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.pt-promo-header {
+  padding-top: 0.325rem; /* 5.2px, extrait du site */
+}
+.transform-box-fill {
+  transform-box: fill-box;
+}
+.intro__title-decoration {
+  margin-top: 1.5rem; /* ou 24px */
+  text-align: center;
+  width: 100%;
+}
+.section-5__title-decoration {
+  margin-top: 2rem; /* valeur à ajuster selon l'inspection (probablement 8-12px) */
+  text-align: center;
+}
+.transform-box-fill {
+  transform-box: fill-box;
+}
+.intro__title-decoration img {
+  display: block;
+  max-width: 80%; /* ou une largeur limitée sur desktop */
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.2; /* car la ligne est discrète */
+}
+.image-trail__photo {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.image-trail__photo:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+.image-trail {
+  position: relative;
+  width: 100%;
+  height: 600px; /* ou 100% selon le contexte */
+  overflow: hidden;
+}
+
+.image-trail__photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none; /* pour ne pas interférer avec la souris */
+  transition: transform 0.1s ease-out; /* possible mais probablement remplacé par JS */
+  will-change: transform;
+}
+
+.image-trail__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -223,7 +285,7 @@ p .line span,
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   /* transform: rotate(20deg); */
   /* transform-origin: bottom left; */
@@ -258,3 +320,4 @@ p .line span,
 .six .section-inner {
   background-color: var(--base-600);
 }
+/*  */
