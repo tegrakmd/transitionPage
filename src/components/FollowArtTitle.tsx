@@ -39,7 +39,7 @@ const desktopLetters = [
   },
   {
     d: 'M191.5 500C148.433 500 125 474.306 125 427.083V73.6111C125 25.6944 148.433 0 191.5 0C234.567 0 258 25.6944 258 73.6111V427.083C258 474.306 234.567 500 191.5 500ZM191.5 443.75C199.733 443.75 203.533 436.111 203.533 422.917V77.0833C203.533 63.8889 199.733 56.25 191.5 56.25C183.267 56.25 178.833 63.8889 178.833 77.0833V422.917C178.833 436.111 183.267 443.75 191.5 443.75Z',
-    targetScaleY: 0.989695,
+    targetScaleY: 0.789695,
   },
   {
     d: 'M109 63.1629H54.1813V219.126H102.626V276.289H54.1813V500H0V6H109V63.1629Z',
@@ -61,7 +61,7 @@ export default function FollowArtTitle() {
   });
 
   return (
-    <div className="px-1 pt-promo-header" ref={containerRef}>
+    <div className="px-1 pt-2" ref={containerRef}>
       {/* Titre masqué pour SEO */}
       <h1 className="sr-only">FOLLOW.ART One Practice. One Card</h1>
 

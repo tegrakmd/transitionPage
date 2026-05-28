@@ -6,6 +6,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/nav";
+import LargeCover from "@/components/Overleay";
+// import LoadingOverlay from "@/components/LoadingOverlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +45,8 @@ export default function RootLayout({
           newsflashBB.variable,
           "h-full antialiased"
         )}>
-        <body  suppressHydrationWarning className="min-h-full flex flex-col">
+        <body suppressHydrationWarning className="min-h-full flex flex-col">
+          <LargeCover />
           <Navbar />
           {children}
         </body>
