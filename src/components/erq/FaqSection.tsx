@@ -110,7 +110,7 @@ export function FaqSection() {
       <div className="max-w-[800px] mx-auto flex flex-col items-center">
         <h2
           className="text-white text-[28px] sm:text-[30px] leading-[28px] tracking-[-0.28px] text-center mb-[60px] sm:mb-[100px]"
-          style={{ fontWeight: 500 }}
+          style={{ fontWeight: 700 }}
         >
           {faqData.title}
         </h2>
@@ -120,7 +120,7 @@ export function FaqSection() {
             <div key={category.id} className="flex flex-col gap-[10px]">
               <span
                 className="text-[#A1A1A1] text-[14px] leading-[22px] tracking-[-0.14px]"
-                style={{ fontWeight: 500 }}
+                style={{ fontWeight: 600 }}
               >
                 {category.label}
               </span>

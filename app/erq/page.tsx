@@ -111,7 +111,7 @@ export default function erqePage(){
       <div className="flex flex-col gap-[5px] w-full">
         <h2
           className="text-[#fafafa] text-[30px] leading-[34px] tracking-[-0.4px]"
-          style={{ fontWeight: 500 }}
+          style={{ fontWeight: 600 }}
         >
           Personal boards
         </h2>
@@ -291,7 +291,7 @@ export default function erqePage(){
       <div className="flex flex-col gap-[5px] max-w-[360px]">
         <h2
           className="text-[#fafafa] text-[30px] leading-[34px] tracking-[-0.4px]"
-          style={{ fontWeight: 500 }}
+           style={{ fontWeight: 600 }}
         >
           Advanced search
         </h2>

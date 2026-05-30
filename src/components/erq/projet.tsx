@@ -175,7 +175,7 @@ const CreativeWork = () => {
       <div className="flex flex-col items-center gap-[5px] mb-10 sm:mb-14 px-6">
         <h2
           className="text-[#fafafa] text-[30px] leading-[34px] tracking-[-0.4px] text-center"
-        
+         style={{ fontWeight: 600 }}
         >
           Production-ready
         </h2>

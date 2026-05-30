@@ -27,7 +27,7 @@ export function Cta(){
           <p
             className="text-white text-[15px] leading-[18px] tracking-[-0.15px] text-center whitespace-nowrap"
             style={{
-              fontWeight: 500,
+              fontWeight: 600,
               opacity: 0.4,
             }}
           >
@@ -35,7 +35,7 @@ export function Cta(){
           </p>
           <h2
             className="text-white text-[35px] leading-[1] tracking-[-0.35px] text-center"
-            style={{ fontWeight: 500 }}
+            style={{ fontWeight: 600 }}
           >
             <span>The library for what's next.</span>
           </h2>
@@ -43,8 +43,9 @@ export function Cta(){
         <a
           href="/signup"
           className="text-white hover:text-[#0a0a0a] text-[14px] leading-[14px] tracking-[-0.28px] rounded-[8px] bg-white/10 hover:bg-white backdrop-blur-[20px] transition-all duration-200 inline-block text-center"
+          
           style={{
-            fontWeight: 500,
+            fontWeight: 600,
             padding: "14px 24px",
           }}
         >
