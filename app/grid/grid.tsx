@@ -106,7 +106,7 @@ const VotraGallery = () => {
   return (
     <div className="min-h-screen bg-white text-black font-mono text-[10px] uppercase tracking-wide overflow-x-hidden selection:bg-black selection:text-white p-2">
       {/* Header Section */}
-      <header className="flex justify-between items-center px-4 py-3 border-b border-transparent">
+      <header className="flex justify-between items-center px-4 mt-8 py-3 border-b border-transparent">
         <div className="flex items-center space-x-2 font-mono text-md">
           <span className="font-bold">Votra,</span>
           <span className="text-gray-500">Identity, 2025</span>
