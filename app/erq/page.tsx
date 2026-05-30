@@ -53,7 +53,7 @@ export default function erqePage() {
           </div>
 
           <div className="max-w-[922px] w-full mx-auto">
-            <div className="rounded-lg overflow-hidden border-2 border-black ring-1 ring-muted-foreground/20">
+            <div className="rounded-lg overflow-hidden border-2 border-[#0000] ring-1 ring-muted-foreground/20">
               <LazyVideo
                 src={HERO_VIDEO}
                 priority
@@ -286,7 +286,8 @@ export default function erqePage() {
                 width={220}
                 height={160}
                 sizes="(max-width: 711px) 31vw, 220px"
-                className="w-full h-auto"
+                className="w-full"
+                style={{ height: "auto" }}
               />
             </div>
           </div>
