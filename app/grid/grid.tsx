@@ -13,7 +13,8 @@ const VotraGallery = () => {
     {
       id: 'VTR_02',
       type: 'video', // Text overlay requires special handling
-      src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514616001_Social_Content.webp',
+  
+       src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-bg-right.webp',
       caption: 'VTR 02.MP4',
       aspectRatio: 'aspect-[2/3]', // Taller portrait
       colSpan: 'col-span-3'
@@ -21,7 +22,7 @@ const VotraGallery = () => {
     {
       id: 'VTR_03',
       type: 'image',
-      src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-bg-right.webp',
+        src: '/lotion.jpg',
       caption: 'VTR 03.JPG',
       aspectRatio: 'aspect-[3/2]', // Wider landscape
       colSpan: 'col-span-3'
@@ -37,7 +38,7 @@ const VotraGallery = () => {
     {
       id: 'VTR_07',
       type: 'image',
-      src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-bg-top.webp',
+      src: '/soup.jpg',
       caption: 'VTR 07.JPG',
       aspectRatio: 'aspect-square',
       colSpan: 'col-span-3'
@@ -46,16 +47,16 @@ const VotraGallery = () => {
     {
       id: 'VTR_05',
       type: 'image',
-      src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-bg-right.webp',
+      src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514616001_Social_Content.webp',
       caption: 'VTR 05.JPG',
-      aspectRatio: 'aspect-[4/5]',
+      aspectRatio: 'aspect-[1.5]',
       colSpan: 'col-span-3'
     },
       {
       id: 'VTR_09',
       type: 'image',
       src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-bg-top.webp',
-      caption: 'VTR 07.JPG',
+      caption: 'VTR 09.JPG',
       aspectRatio: 'aspect-square',
       colSpan: 'col-span-3'
     },
@@ -63,7 +64,7 @@ const VotraGallery = () => {
       id: 'VTR_10',
       type: 'image',
       src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-main.webp',
-      caption: 'VTR 08.JPG',
+      caption: 'VTR 10.JPG',
       aspectRatio: 'aspect-[3/2]',
       colSpan: 'col-span-3'
     }
@@ -72,7 +73,7 @@ const VotraGallery = () => {
       id: 'VTR_11',
       type: 'image',
       src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-bg-top.webp',
-      caption: 'VTR 07.JPG',
+      caption: 'VTR 11.JPG',
       aspectRatio: 'aspect-square',
       colSpan: 'col-span-3'
     },
@@ -80,14 +81,14 @@ const VotraGallery = () => {
       id: 'VTR_12',
       type: 'image',
       src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/personal_boards/boards-main.webp',
-      caption: 'VTR 08.JPG',
+      caption: 'VTR 12.JPG',
       aspectRatio: 'aspect-[3/2]',
       colSpan: 'col-span-3'
     },
     {
       id: 'VTR_06',
       type: 'image',
-      src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
+      src: '/lotion.jpg',
       caption: 'VTR 06.JPG',
       aspectRatio: 'aspect-[3/2]',
       colSpan: 'col-span-3'
@@ -104,14 +105,14 @@ const VotraGallery = () => {
    
   ];
   return (
-    <div className="min-h-screen bg-white text-black font-mono text-[10px] uppercase tracking-wide overflow-x-hidden selection:bg-black selection:text-white p-2">
+    <div className="min-h-screen bg-white text-black font-mono text-[10px] uppercase tracking-wide overflow-x-hidden selection:bg-black selection:text-white p-2 ">
       {/* Header Section */}
-      <header className="flex justify-between items-center px-4 mt-8 py-3 border-b border-transparent">
-        <div className="flex items-center space-x-2 font-mono text-md">
-          <span className="font-bold">Votra,</span>
-          <span className="text-gray-500">Identity, 2025</span>
-          <button className="ml-2 hover:opacity-50 transition-opacity">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <header className="flex justify-between items-center px-2 pt-12 mt-8 py-3 border-b border-transparent">
+        <div className="flex items-center font-mono text-md">
+          <span className="font-bold md:text-[14px] leading-tight  tracking-[0.10rem]">Votra,</span>
+          <span className="text-gray-500 md:text-[14px] leading-tight  tracking-[0.10rem]">Identity, 2025</span>
+          <button className="ml-1 hover:opacity-50 transition-opacity">
+            <svg width="12" height="12  " viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
@@ -179,7 +180,7 @@ const VotraGallery = () => {
               
               {/* Caption positioned directly below, tight spacing */}
               <div className="mt-2 flex justify-start">
-                <span className=" font-suisse-intl text-md leading-tight font-semibold tracking-[0.1rem]">{item.caption}</span>
+                <span className=" text-[14px] leading-tight  tracking-[0.12rem]">{item.caption}</span>
               </div>
             </div>
           ))}

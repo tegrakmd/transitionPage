@@ -1,8 +1,8 @@
+"use client"
+import { cn } from '@/lib/utils';
+import React, { useState } from 'react';
 
-// Navbar.tsx
-import React from 'react';
-
-// ───────────────────── Icône Logo réutilisable ─────────────────────
+// ───────────────────────── Icônes ─────────────────────────
 const LogoIcon: React.FC = () => (
   <svg
     className="h-[22px] w-[51px] text-[#fafafa]"
@@ -29,72 +29,125 @@ const LogoIcon: React.FC = () => (
   </svg>
 );
 
-// ───────────────────── Icône Hamburger ─────────────────────
 const HamburgerIcon: React.FC = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <line
-      x1="4"
-      y1="8"
-      x2="20"
-      y2="8"
-      stroke="#ffffff"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <line
-      x1="4"
-      y1="16"
-      x2="20"
-      y2="16"
-      stroke="#ffffff"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <line x1="4" y1="8" x2="20" y2="8" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+    <line x1="4" y1="16" x2="20" y2="16" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
 
-// ───────────────────── Composant Navbar unifié ─────────────────────
+const CloseIcon: React.FC = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <line x1="6" y1="6" x2="18" y2="18" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="18" y1="6" x2="6" y2="18" stroke="#fafafa" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+const UserIcon: React.FC = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="invert">
+    <circle cx="10" cy="7" r="3.5" stroke="#fafafa" strokeWidth="1.2" />
+    <path d="M3 18.5C3 15.4624 5.46243 13 8.5 13H11.5C14.5376 13 17 15.4624 17 18.5" 
+          stroke="#fafafa" strokeWidth="1.2" strokeLinecap="round" />
+  </svg>
+);
+
+// ───────────────────── Composant Navbar ─────────────────────
 const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
-      {/* ========== Mobile ========== */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-[20px] pt-[45px]">
+      {/* ==================== Mobile (menu rideau) ==================== */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-5 pt-2">
         <div
-          className="backdrop-blur-[15px] rounded-[10px] overflow-clip p-[10px]"
+          className="font-suisse-intl rounded-[10px] backdrop-blur-[15px] overflow-hidden p-2.5"
           style={{ backgroundColor: 'rgba(23, 23, 23, 0.8)' }}
         >
-          <div className="flex items-center justify-center w-full">
-            <div className="flex flex-1 items-center pl-[15px]">
-              <a
-                className="flex items-center justify-center h-[22px] w-[51px]"
-                href="/"
+          <div className="flex h-11 shrink-0 items-center justify-between pl-[15px]  pr-1">
+            <a
+              className="flex h-[22px] w-[51px] items-center justify-center"
+              href="/"
+              onClick={closeMenu}
+            >
+              <LogoIcon />
+            </a>
+            <button
+              type="button"
+              onClick={toggleMenu}
+              className="flex h-11 w-11 items-center justify-center"
+              aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-expanded={isMenuOpen}
+            >
+              {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+            </button>
+          </div>
+
+          <div
+            className={cn(`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+              isMenuOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+            }`)}
+          >
+            <div className="min-h-0 overflow-hidden">
+              <nav
+                className="flex flex-col gap-4 px-[15px] pt-5 pb-2.5"
+                aria-hidden={!isMenuOpen}
               >
-                <LogoIcon />
-              </a>
-            </div>
-            <div className="flex flex-1 items-center justify-end gap-[10px] pr-[15px]">
-              <div className="h-[40px] w-[121px]" />
-              <button
-                type="button"
-                aria-label="Open menu"
-                className="flex items-center justify-center w-[44px] h-[44px] -mr-[10px]"
-              >
-                <HamburgerIcon />
-              </button>
+                <div className="flex flex-col gap-4 space-y-4">
+                  <a
+                    href="#curated_collections"
+                    className="text-[#fafafa] text-[16px] font-medium leading-none"
+                    onClick={closeMenu}
+                  >
+                    Features
+                  </a>
+                  <a
+                    href="/pricing"
+                    className="text-[#fafafa] text-[16px] font-medium leading-none"
+                    onClick={closeMenu}
+                  >
+                    Pricing
+                  </a>
+                  <a
+                    href="#faq"
+                    className="text-[#fafafa] text-[16px] font-medium leading-none"
+                    onClick={closeMenu}
+                  >
+                    FAQs
+                  </a>
+                </div>
+
+                {/* <a
+                  className="flex items-center gap-3 my-2"
+                  href="/login"
+                  onClick={closeMenu}
+                >
+                  <UserIcon />
+                  <span className="text-[#fafafa] text-[16px] font-medium leading-none">
+                    Log in
+                  </span>
+                </a> */}
+
+                <div className="h-px w-full bg-white/20" />
+
+                <a
+                  className="flex h-[42px] w-full items-center justify-center rounded-[8px] bg-[#fafafa] text-[14px] font-medium tracking-[-0.28px] text-[#0a0a0a]"
+                  href="/#"
+                  onClick={closeMenu}
+                >
+                  Sign Up
+                </a>
+              </nav>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ========== Desktop ========== */}
+      {/* ==================== Desktop ==================== */}
       <nav
-        className="hidden lg:block fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-0 lg:flex lg:justify-center transition-opacity duration-200"
+        className="hidden fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-0 lg:flex lg:justify-center transition-opacity duration-200"
         style={{ paddingTop: 40, opacity: 1, pointerEvents: 'auto' }}
       >
         <div
@@ -107,21 +160,21 @@ const Navbar: React.FC = () => {
               <a
                 href="#curated_collections"
                 className="font-medium text-[#fafafa] hover:opacity-70 transition-opacity duration-200"
-              
+               
               >
                 Features
               </a>
               <a
                 href="/pricing"
                 className="font-medium text-[#fafafa] hover:opacity-70 transition-opacity duration-200"
-           
+             
               >
                 Pricing
               </a>
               <a
                 href="#faq"
                 className="font-medium text-[#fafafa] hover:opacity-70 transition-opacity duration-200"
-            
+                
               >
                 FAQs
               </a>
@@ -144,7 +197,7 @@ const Navbar: React.FC = () => {
               <a
                 className="flex items-center justify-center px-[24px] py-[14px] rounded-[8px] bg-[#fafafa] font-medium text-[#0a0a0a] hover:opacity-80 transition-opacity duration-200"
                 href="/signup"
-             
+               
               >
                 Sign Up
               </a>
@@ -157,4 +210,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-// export default DesktopNavbar;
