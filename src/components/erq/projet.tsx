@@ -19,11 +19,11 @@ const VISIBLE_DESKTOP = 4;
 
 const creativeWorksData: CreativeWorkItem[] = [
       {
-    id: 'developper',
+    id: 'developer',
     type: 'image',
     src:'/me.webp',
     alt: 'CEO',
-    title: 'Web Developper Tegra Kmd',
+    title: 'Web Developer Tegra Kmd',
   },
   {
     id: 'campaigns',
