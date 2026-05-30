@@ -4,16 +4,13 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import Image from "next/image";
 import { TextInfo } from "@/components/textInfo";
 import {NavColorComp} from "@/components/navColor"
-// import {
-//   MorphingBorderTop,
-//   MorphingBorderBottom,
-// } from "@/components/terminal_border_animation";
+
 import { useRef } from "react";
 import PrevienOne from "@/components/previewOne";
 import LiquideComponent from "@/components/previewTwo";
 import RootLayout from "./layout";
 import ReootLayout from "@/components/customizer/layout.example";
-// import ThemeCustomizer from "@/components/customizer/ThemeCustomizer";
+
 
 
 import ThemeCustomizer from '@/components/customizer/ThemeCustomizer'
