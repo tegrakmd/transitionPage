@@ -25,13 +25,7 @@ const creativeWorksData: CreativeWorkItem[] = [
     alt: 'CEO',
     title: 'Web Developer Tegra Kmd',
   },
-  {
-    id: 'campaigns',
-    type: 'image',
-    src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
-    alt: 'Campaigns & Advertising',
-    title: 'Campaigns & Advertising',
-  },
+ 
   {
     id: 'web',
     type: 'video',
@@ -52,6 +46,13 @@ const creativeWorksData: CreativeWorkItem[] = [
     src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514616001_Social_Content.webp',
     alt: 'Social Content',
     title: 'Social Content',
+  },
+   {
+    id: 'campaigns',
+    type: 'image',
+    src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
+    alt: 'Campaigns & Advertising',
+    title: 'Campaigns & Advertising',
   },
   {
     id: 'presentations',
@@ -76,7 +77,7 @@ const tripleData: CreativeWorkItem[] = [
   ...creativeWorksData,
 ];
 
-const TOTAL_ORIGINAL = creativeWorksData.length; // 6
+const TOTAL_ORIGINAL = creativeWorksData.length; // 7
 const START_INDEX = TOTAL_ORIGINAL; // on commence au 1er élément du set du milieu
 
 // ─────────────────────────── Composant ───────────────────────────
@@ -115,7 +116,7 @@ const CreativeWork = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
-    }, 2600);
+    }, 2700);
   }, []);
 
   useEffect(() => {
