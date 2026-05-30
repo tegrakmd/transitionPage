@@ -80,7 +80,11 @@ const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-1 items-center justify-end gap-[10px] pr-[15px]">
               <div className="h-[40px] w-[121px]" />
-              <button className="flex items-center justify-center w-[44px] h-[44px] -mr-[10px]">
+              <button
+                type="button"
+                aria-label="Open menu"
+                className="flex items-center justify-center w-[44px] h-[44px] -mr-[10px]"
+              >
                 <HamburgerIcon />
               </button>
             </div>

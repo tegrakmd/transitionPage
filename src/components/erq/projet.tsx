@@ -1,5 +1,7 @@
 "use client"
 import  { useState, useEffect, useRef, useCallback } from 'react';
+import Image from 'next/image';
+import { LazyVideo } from '@/components/erq/LazyVideo';
 
 // ───────────────────────────── Types ─────────────────────────────
 interface CreativeWorkItem {
@@ -168,6 +170,9 @@ const CreativeWork = () => {
   const isItemActive = (index: number) =>
     index >= currentIndex && index < currentIndex + visibleCount;
 
+  const isItemNearActive = (index: number) =>
+    index >= currentIndex - 1 && index < currentIndex + visibleCount + 1;
+
   // ───────────────────────── Rendu ─────────────────────────
   return (
     <section id="creative_work" className="pb-[100px] sm:pb-[230px]">
@@ -235,22 +240,23 @@ const CreativeWork = () => {
                   }}
                 >
                   {item.type === 'image' ? (
-                    <img
+                    <Image
                       src={item.src}
                       alt={item.alt}
-                      loading="lazy"
-                      className="size-full  object-cover"
-                     
+                      fill
+                      sizes="(max-width: 1024px) 45vw, 275px"
+                      className="object-cover"
                     />
-                  ) : (
-                    <video
+                  ) : isItemNearActive(index) ? (
+                    <LazyVideo
                       src={item.src}
                       autoPlay
                       loop
-                      playsInline
-                      muted
-                     className="size-full  object-cover"
+                      active={isItemActive(index)}
+                      className="size-full object-cover"
                     />
+                  ) : (
+                    <div className="size-full bg-[#1a1a1a]" aria-hidden />
                   )}
                 </div>
 
