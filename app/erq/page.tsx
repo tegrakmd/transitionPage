@@ -16,8 +16,8 @@ export default function erqePage(){
   <div className="flex flex-col-reverse sm:flex-col items-center gap-[49px] sm:gap-[60px]">
     <div className="max-w-[360px] mx-auto flex flex-col items-center gap-[15px]">
       <h2
-        className="text-foreground text-center text-[40px] sm:text-[60px] leading-[34px] sm:leading-[0.85] tracking-[-0.2rem] max-w-[260px] sm:max-w-none "
-        
+        className="text-foreground text-center text-[40px] sm:text-[60px] leading-[34px] sm:leading-[0.85] tracking-[-0.1rem] max-w-[260px] sm:max-w-none "
+         style={{ fontWeight: 600 }}
       >
         <span>Art directed stock library</span>
       </h2>
@@ -30,8 +30,8 @@ export default function erqePage(){
       <div className="mt-[15px]">
         <a
           href="/signup"
-          className="bg-[#fafafa] text-[#0a0a0a] px-[24px] py-[14px] rounded-[8px] text-[14px] leading-[14px] tracking-[-0.28px] font-medium hover:opacity-80 transition-opacity duration-200 inline-block"
-         
+          className="bg-[#fafafa] font-[500] text-[#0a0a0a] px-[24px] py-[14px] rounded-[8px] text-[14px] leading-[14px] tracking-[-0.28px]  hover:opacity-80 transition-opacity duration-200 inline-block"
+          // style={{ fontWeight: 600 }}
         >
           Get started
         </a>
@@ -40,8 +40,8 @@ export default function erqePage(){
 
     <div className="max-w-[922px] w-full mx-auto">
       <div
-        className="rounded-lg overflow-hidden"
-        style={{ border: "0.48px solid rgba(255, 255, 255, 0.2)" }}
+        className="rounded-lg overflow-hidden border-2 border-black ring-1 ring-muted-foreground/20"
+        // style={{ border: "0.48px solid rgba(255, 255, 255, 0.2)" }}
       >
         <video autoPlay loop playsInline className="w-full h-auto">
           <source

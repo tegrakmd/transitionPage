@@ -47,13 +47,13 @@ const creativeWorksData: CreativeWorkItem[] = [
     alt: 'Social Content',
     title: 'Social Content',
   },
-   {
-    id: 'campaigns',
-    type: 'image',
-    src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
-    alt: 'Campaigns & Advertising',
-    title: 'Campaigns & Advertising',
-  },
+  //  {
+  //   id: 'campaigns',
+  //   type: 'image',
+  //   src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
+  //   alt: 'Campaigns & Advertising',
+  //   title: 'Campaigns & Advertising',
+  // },
   {
     id: 'presentations',
     type: 'video',
@@ -239,7 +239,8 @@ const CreativeWork = () => {
                       src={item.src}
                       alt={item.alt}
                       loading="lazy"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      className="size-full  object-cover"
+                     
                     />
                   ) : (
                     <video
@@ -248,7 +249,7 @@ const CreativeWork = () => {
                       loop
                       playsInline
                       muted
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                     className="size-full  object-cover"
                     />
                   )}
                 </div>
@@ -257,13 +258,12 @@ const CreativeWork = () => {
                 <h3
                   className="text-foreground text-sm sm:text-base mt-3 sm:mt-[15px]"
                   style={{
-                    
                     lineHeight: 1.4,
                     color: '#fafafa',
                   }}
                 >
                   <span>{item.title}</span>
-                    {/* fontFamily: '"Suisse Intl", system-ui, sans-serif', */}
+                   
                 </h3>
               </div>
             ))}
