@@ -1,10 +1,14 @@
 import { Cta } from "@/components/erq/ctaVideo";
 import { FaqSection } from "@/components/erq/FaqSection";
 import CreativeWork from "@/components/erq/projet";
+import Navbar from "./navera";
+
 
 export default function erqePage(){
     return(
-        <main className=" bg-black">
+        <main className=" bg-black font-suisse-intl">
+          <Navbar/>
+       
                 <section
   id="hero"
   className="pt-[118px] sm:pt-[188px] pb-[90px] sm:pb-[100px] px-6"
@@ -12,8 +16,8 @@ export default function erqePage(){
   <div className="flex flex-col-reverse sm:flex-col items-center gap-[49px] sm:gap-[60px]">
     <div className="max-w-[360px] mx-auto flex flex-col items-center gap-[15px]">
       <h2
-        className="text-foreground text-center text-[40px] sm:text-[60px] leading-[34px] sm:leading-[0.85] tracking-[-1.2px] max-w-[260px] sm:max-w-none "
-        style={{ fontWeight: 100 }}
+        className="text-foreground text-center text-[40px] sm:text-[60px] leading-[34px] sm:leading-[0.85] tracking-[-0.2rem] max-w-[260px] sm:max-w-none "
+        
       >
         <span>Art directed stock library</span>
       </h2>

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import  { useState, useEffect, useRef, useCallback } from 'react';
 
 // ───────────────────────────── Types ─────────────────────────────
 interface CreativeWorkItem {
@@ -21,9 +21,10 @@ const creativeWorksData: CreativeWorkItem[] = [
   {
     id: 'campaigns',
     type: 'image',
-    src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
-    alt: 'Campaigns & Advertising',
-    title: 'Campaigns & Advertising',
+    // src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
+    src:'/me.webp',
+    alt: 'CEO',
+    title: 'Web Developper Tegra Kmd',
   },
   {
     id: 'web',
@@ -167,7 +168,7 @@ const CreativeWork = () => {
       <div className="flex flex-col items-center gap-[5px] mb-10 sm:mb-14 px-6">
         <h2
           className="text-[#fafafa] text-[30px] leading-[34px] tracking-[-0.4px] text-center"
-          style={{fontWeight: 800 }}
+        
         >
           Production-ready
         </h2>
