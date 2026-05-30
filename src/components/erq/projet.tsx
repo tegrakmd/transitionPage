@@ -18,13 +18,19 @@ const VISIBLE_MOBILE = 2;
 const VISIBLE_DESKTOP = 4;
 
 const creativeWorksData: CreativeWorkItem[] = [
-  {
-    id: 'campaigns',
+      {
+    id: 'developper',
     type: 'image',
-    // src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
     src:'/me.webp',
     alt: 'CEO',
     title: 'Web Developper Tegra Kmd',
+  },
+  {
+    id: 'campaigns',
+    type: 'image',
+    src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
+    alt: 'Campaigns & Advertising',
+    title: 'Campaigns & Advertising',
   },
   {
     id: 'web',
