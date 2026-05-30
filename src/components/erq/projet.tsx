@@ -13,11 +13,11 @@ interface CreativeWorkItem {
 }
 
 // ──────────────────────────── Données ────────────────────────────
-const GAP = 20;
-const ITEM_ASPECT = 275.556 / 206.667;
+const GAP = 22;
+const ITEM_ASPECT = 285.566 / 206.667;
 const DESKTOP_BREAKPOINT = 1024;
 const VISIBLE_MOBILE = 2;
-const VISIBLE_DESKTOP = 4;
+const VISIBLE_DESKTOP = 4.1;
 
 const creativeWorksData: CreativeWorkItem[] = [
       {
@@ -118,7 +118,7 @@ const CreativeWork = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
-    }, 2700);
+    }, 2800);
   }, []);
 
   useEffect(() => {
@@ -212,10 +212,12 @@ const CreativeWork = () => {
               display: 'flex',
               gap: GAP,
               paddingBottom: 16,
+              
               willChange: 'transform',
               transform: `translateX(${translateX}px)`,
               transition: isTransitioning ? 'transform 0.4s ease-out' : 'none',
             }}
+            
           >
             {tripleData.map((item, index) => (
               <div

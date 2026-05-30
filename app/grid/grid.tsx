@@ -154,7 +154,7 @@ const VotraGallery = () => {
       {/* Main Grid Container */}
       <main className="p-2">
 
-        <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 items-start">
+        <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px_10px] items-start">
           
           {}
           {galleryItems.map((item, index) => (
