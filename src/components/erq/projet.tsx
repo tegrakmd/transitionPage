@@ -49,13 +49,13 @@ const creativeWorksData: CreativeWorkItem[] = [
     alt: 'Social Content',
     title: 'Social Content',
   },
-  //  {
-  //   id: 'campaigns',
-  //   type: 'image',
-  //   src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
-  //   alt: 'Campaigns & Advertising',
-  //   title: 'Campaigns & Advertising',
-  // },
+   {
+    id: 'campaigns',
+    type: 'image',
+    src: 'https://arqe-storage-images.nyc3.cdn.digitaloceanspaces.com/landing-page/creative_work/media_library/1776514578239_Campaigns___Advertising.webp',
+    alt: 'Campaigns & Advertising',
+    title: 'Campaigns & Advertising',
+  },
   {
     id: 'presentations',
     type: 'video',

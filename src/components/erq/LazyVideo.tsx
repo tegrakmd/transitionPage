@@ -9,6 +9,8 @@ type LazyVideoProps = Omit<
   src: string;
   /** Load immediately (hero / above-the-fold). */
   priority?: boolean;
+  /** Load as soon as the component mounts (e.g. carousel duplicates). */
+  eager?: boolean;
   /** When false, video is paused even if loaded. */
   active?: boolean;
 };
@@ -16,16 +18,17 @@ type LazyVideoProps = Omit<
 export function LazyVideo({
   src,
   priority = false,
+  eager = false,
   active = true,
   className,
   autoPlay,
   ...props
 }: LazyVideoProps) {
   const ref = useRef<HTMLVideoElement>(null);
-  const [shouldLoad, setShouldLoad] = useState(priority);
+  const [shouldLoad, setShouldLoad] = useState(priority || eager);
 
   useEffect(() => {
-    if (priority) return;
+    if (priority || eager) return;
 
     const el = ref.current;
     if (!el) return;
@@ -42,7 +45,7 @@ export function LazyVideo({
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [priority]);
+  }, [priority, eager]);
 
   useEffect(() => {
     const el = ref.current;
@@ -60,7 +63,7 @@ export function LazyVideo({
       ref={ref}
       muted
       playsInline
-      preload={priority ? "metadata" : "none"}
+      preload={priority || eager ? "auto" : "none"}
       aria-hidden
       className={className}
       {...props}

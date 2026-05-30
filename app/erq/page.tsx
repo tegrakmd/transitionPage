@@ -45,7 +45,7 @@ export default function erqePage() {
             <div className="mt-[15px]">
               <a
                 href="/signup"
-                className="bg-[#fafafa] font-[500] text-[#0a0a0a] px-[24px] py-[14px] rounded-[8px] text-[14px] leading-[14px] tracking-[-0.28px]  hover:opacity-80 transition-opacity duration-200 inline-block"
+                className="bg-[#fafafa] font-medium text-[#0a0a0a] px-[24px] py-[14px] rounded-[8px] text-[14px] leading-[14px] tracking-[-0.28px]  hover:opacity-80 transition-opacity duration-200 inline-block"
               >
                 Get started
               </a>
@@ -60,6 +60,7 @@ export default function erqePage() {
                 autoPlay
                 loop
                 className="w-full h-auto"
+                
               />
             </div>
           </div>

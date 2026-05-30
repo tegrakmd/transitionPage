@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* ========== Mobile ========== */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-[20px] pt-[20px]">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-[20px] pt-[45px]">
         <div
           className="backdrop-blur-[15px] rounded-[10px] overflow-clip p-[10px]"
           style={{ backgroundColor: 'rgba(23, 23, 23, 0.8)' }}
