@@ -84,6 +84,17 @@ const Navbar = () => {
                     }}
                         href="/section">section</a>
                 </div>
+                <div className="link">
+                    <a onClick={(e) => {
+                        e.preventDefault();
+                        router.push("/erq",
+                            {
+                                onTransitionReady: slideInOut,
+
+                            });
+                    }}
+                        href="/erq">erq</a>
+                </div>
             </div>
         </div>
     );

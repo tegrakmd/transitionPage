@@ -8,6 +8,7 @@ import { SplitText } from "@/components/splitText";
 import Image from "next/image";
 import FollowArtTitle from "@/components/FollowArtTitle";
 import NexusCardTitle from "@/components/FollowArtCard";
+import LiquideComponent from "@/components/previewTwo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,15 +82,6 @@ export default function Page() {
         <main ref={containerRef}>
           <section className="Section one">
             <div className="section-inner flex flex-col">
-              {/* <div className="m-auto ">
-                                <SplitText as="h1"
-                                    className="text-[15vw] font-bold text-white font-mono uppercase tracking-[-0.2rem]"
-                                    duration={1}
-                                    stagger={0.075}
-                                    delay={1}>
-                                    Transition Section 1
-                                </SplitText>
-                            </div> */}
               <FollowArtTitle />
             </div>
           </section>
@@ -121,12 +113,20 @@ export default function Page() {
           </section>
           <section className="Section six">
             <div className="section-inner">
+             
               <div className="m-auto ">
                 <h1>Transition Section 6</h1>
               </div>
             </div>
           </section>
+           <section className="Section sevent ">
+            <div className="section-inner">
+              <LiquideComponent />
+            </div>
+          </section>
+  
         </main>
+       
         <footer className="bg-black  h-[50dvh] w-full">
           <div className="flex items-center justify-center size-full">
             <h1 className="">FooteR</h1>

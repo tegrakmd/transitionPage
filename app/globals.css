@@ -239,7 +239,6 @@ body {
   font-display: swap;
   src: url("./fonts/NewsflashBB.ttf") format("truetype");
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -281,6 +280,9 @@ p .line span,
 .Section.five {
   height: 200svh;
 }
+.sevent .section-inner {
+  padding: 0;
+}
 .Section .section-inner {
   position: relative;
   width: 100%;
@@ -317,7 +319,6 @@ p .line span,
 .four .section-inner {
   background-color: var(--base-400);
 }
-
 .six .section-inner {
   background-color: var(--base-600);
 }

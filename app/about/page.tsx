@@ -2,6 +2,7 @@
 
 import { ReactLenis } from "@studio-freight/react-lenis"
 import { SplitText } from "@/components/splitText"
+import FloatingToolbar from "@/components/floting";
 
 export default function AboutPage() {
    return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
                >
                   About Kmd
                </SplitText>
+
             </div>
          </section>
       </ReactLenis>
