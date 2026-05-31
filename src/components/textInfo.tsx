@@ -12,7 +12,7 @@ export function TextInfo() {
           stagger={0.075}
           delay={0.25}
           className="text-white  font-mono text-lg  text-balance tracking-[-0.015rem] ">
-          Lorem ipsum dolor sit amet co
+          Herida __ Lady Gaga
         </SplitLines>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 "use client";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import Image from "next/image";
